@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Primary_background">#114F84</color>
+    <color name="secondary_color">#1497A6</color>
+    <color name="seatmale">#7AADB5</color>
+    <color name="seatfemale">#A2CAE9</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>
