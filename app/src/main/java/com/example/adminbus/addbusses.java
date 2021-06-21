@@ -171,6 +171,20 @@ public class addbusses extends AppCompatActivity {
         String timearrive=til_timingdesin.getEditText().getText().toString();
         String price=til_price.getEditText().getText().toString();
         String condition=til_bustype.getEditText().getText().toString();
+
+        if(id.isEmpty() | location.isEmpty() | destination.isEmpty() | timeStart.isEmpty()
+                        | timearrive.isEmpty() | price.isEmpty()|condition.isEmpty()){
+            progressDialog.dismiss();
+            Toast.makeText(this, "Invalid", Toast.LENGTH_SHORT).show();
+            return;
+
+        }
+        if(location.equals(destination) | timeStart.equals(timearrive)){
+            progressDialog.dismiss();
+            Toast.makeText(this, "Invalid information", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         String reservedseat=null;
 
         BusModelclass busModelclass = new BusModelclass(id,location,destination,timeStart,timearrive,price,condition,reservedseat);
